@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Bookshelf App</h1>
+    </header>
+    <main>
+      <section class="input">
+        <h2>Tambahkan Buku</h2>
+        <form id="formTambah">
+          <div class="tambah">
+            <label for="judulBuku">Judul Buku</label>
+            <input id="judulBuku" type="text" required />
+          </div>
+          <div class="tambah">
+            <label for="penulisBuku">Penulis</label>
+            <input id="penulisBuku" type="text" required />
+          </div>
+          <div class="tambah">
+            <label for="tahunBuku">Tahun</label>
+            <input id="tahunBuku" type="number" required />
+          </div>
+          <div class="box">
+            <label for="tambahSelesai">Selesai dibaca</label>
+            <input id="tambahSelesai" type="checkbox" />
+          </div>
+          <button id="tSubmit" type="submit">Tambahkan Buku ke rak</button>
+        </form>
+      </section>
+      <section class="pencarian">
+        <h2>Pencarian Buku</h2>
+        <form id="cari">
+          <label for="cariJudul">Judul Buku</label>
+          <input id="cariJudul" type="text" />
+          <button id="cSubmit" type="submit">Cari</button>
+        </form>
+        <div class="listBuku"></div>
+      </section>
+      <section class="rakBuku">
+        <h2>Belum Selesai</h2>
+        <div class="listBuku" id="rakBelum">
+        </div>
+      </section>
+      <section class="rakBuku">
+        <h2>Sudah Selesai</h2>
+        <div class="listBuku" id="rakSudah">
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

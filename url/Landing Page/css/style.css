@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #06283d;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+}
+
+header {
+    position: relative;
+    background: url("awan.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+header:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgb(6,40,61), rgba(6,40,61,0));
+    z-index: 0;
+}
+
+.navbar-list ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.7rem;
+    padding: 20px;
+}
+
+.navbar-list li {
+    list-style-type: none;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: white;
+    border: 2px #06283d transparent;
+    border-radius: 990px;
+    padding: .5rem 1.5rem;
+    transition: all .3s ease-in-out;
+}
+
+.navbar-list li:hover a {
+    background-color: #06283d;
+}
+
+.navbar-list .hlogo {
+    position: relative;
+    display: flex;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    flex: 1;
+}
+
+main .content {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+main .content .beranda {
+    flex: 1 1;
+    align-self: center;
+}
+
+main .content .beranda .title {
+    font-size: 3rem;
+    margin-block: 1rem;
+}
+
+main .content .beranda p {
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+
+main .content .beranda button {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.05rem;
+    border-radius: 900px;
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
+    background-color: #06283d;
+    border: 2px solid white;
+    transition: all .3s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
+
+main .content .beranda button:hover {
+    background-color: white;
+    color: #06283d; 
+}
+
+main .content .profil .image {
+    border-radius: 990px;
+    border: 2px solid white;
+    margin: auto;
+    min-width: 250px;
+    width: 300px;
+    object-fit: cover;
+}
+
+main .image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    align-items: first baseline;
+}
+
+main .content .profil p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main .socialm {
+    padding-top: 90px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+main .socialm .card {
+    display: flex;
+    width: 100%;
+    color: #06283d;
+}
+
+main .socialm .card .incard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(40, 39, 39);
+}
+
+.icons {
+    font-size: 72px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.smtitle {
+    font-size: 2rem;
+}
+
+.smdesc {
+    font-size: 1.1rem;
+}
+
+.btn {
+    box-shadow: none;
+    width: 90px;
+    border: #06283d;
+    margin-bottom: 8px;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 990px;
+    background-color: #06283d;
+    transition: all .3s ease-in-out;
+    border: 2px solid #06283d;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #06283d;
+}
+
+footer {
+    margin: 0;
+    padding: 20px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-list .hlogo {
+        height: 60%;
+    }
+
+    main {
+        padding-bottom: 50px;
+    }
+
+    main .content {
+        height: 100vh;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 613px) {
+    .navbar-list ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 2rem;
+        align-items: center;
+    }
+
+    main .socialm .incard .smdesc {
+        font-size: .8rem;
+        align-items: center;
+    }
+
+    .navbar-list li {
+        padding-bottom: 35px;
+        justify-content: center;
+    }
+}
