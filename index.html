@@ -175,27 +175,28 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
 
-      <form action="index.html">
+      <form action="index.html" name="formKontak">
         <div class="input-group">
           <div class="input-box">
-            <input type="text" placeholder="Nama" />
-            <input type="email" placeholder="Email" />
+            <input type="text" name="nama" placeholder="Nama" required/>
+            <input type="email" name="email" placeholder="Email" required/>
           </div>
           <div class="input-box">
-            <input type="number" placeholder="Nomor Telepon" />
-            <input type="text" placeholder="Subjek" />
+            <input type="number" name="noHP" placeholder="Nomor Telepon" required/>
+            <input type="text" name="subjek" placeholder="Subjek" required/>
           </div>
         </div>
 
         <div class="input-group-2">
           <textarea
-            name=""
+            name="pesan"
             id=""
             cols="30"
             rows="10"
             placeholder="Pesan"
+            required
           ></textarea>
-          <input type="submit" value="Kirim Pesan" class="btn" />
+          <input name="submit" type="submit" value="Kirim Pesan" class="btn" />
         </div>
       </form>
     </section>
