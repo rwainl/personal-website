@@ -22,3 +22,17 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 }
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycby_Egvvwv1sSbOx-IsLuHQvK9D0BVM-cGwV_L6wleHJC9-yW5EBW_KQjguyge2z1W6A/exec';
+  const form = document.forms['formKontak'];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        alert('Pesan Anda Terkirim');
+        form.reset();
+        console.log('Success!', response);
+      })
+      .catch(error => console.error('Error!', error.message))
+  });
